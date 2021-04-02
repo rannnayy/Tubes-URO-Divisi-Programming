@@ -1,16 +1,6 @@
 #include <bits/stdc++.h>
-#include <windows.h>
-#include <WinUser.h>
 
 using namespace std;
-
-#define VK_W 0x57
-#define VK_A 0x41
-#define VK_S 0x53
-#define VK_D 0x44
-#define VK_M 0x4D
-
-HANDLE hinp;
 
 typedef struct robot{
 	int x, y, range, health;
@@ -53,7 +43,7 @@ void menembak(robot **r, kecoak **k){
 
 char ask_user(robot **r, kecoak **k, int n, int pts){
 	char c;
-	cout << "instruksi:\nmenembak: 'm'\nbergerak: 'w'=maju, 's'=mundur, 'a'=kiri, 'd'=kanan\n";
+	cout << "Instructions :\nShoot: 'm'\nMove: 'w' = upward, 's' = downward, 'a' = leftward, 'd' = rightward\n";
 	cout << "command > "; 
 	cin >> c;
 	if(c == 'w'){
@@ -129,7 +119,7 @@ int main(){
 	}
 	system("cls");
 	cout << "Instructions : " << "\n";
-	cout << "Use the keyboard key as follows:\n'W' or 'UP' key to move upwards\n'A' or 'LEFT' key to move left\n'S' or 'DOWN' key to move downwards\n'D' or 'RIGHT' key to move right\n\n";
+	cout << "Use the keyboard key as follows:\n'w' key to move upward\n'a' key to move leftward\n's' key to move downwards\n'd' key to move rightward\n\n";
 	cout << "Characters : \nR = Robot\nK = Kecoa\nHit range = 2 Hyphens ('-')\n\n";
 	robot *r = (robot*)malloc(sizeof(robot));
 	r->x = n-1;
